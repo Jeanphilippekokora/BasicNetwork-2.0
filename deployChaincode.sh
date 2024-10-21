@@ -77,20 +77,20 @@ installChaincode() {
     peer lifecycle chaincode install ${CC_NAME}.tar.gz
     echo "===================== Chaincode is installed on peer0.org1 ===================== "
 
-    # setGlobalsForPeer1Org1
-    # peer lifecycle chaincode install ${CC_NAME}.tar.gz
-    # echo "===================== Chaincode is installed on peer1.org1 ===================== "
+     setGlobalsForPeer1Org1
+     peer lifecycle chaincode install ${CC_NAME}.tar.gz
+     echo "===================== Chaincode is installed on peer1.org1 ===================== "
 
     setGlobalsForPeer0Org2
     peer lifecycle chaincode install ${CC_NAME}.tar.gz
     echo "===================== Chaincode is installed on peer0.org2 ===================== "
 
-    # setGlobalsForPeer1Org2
-    # peer lifecycle chaincode install ${CC_NAME}.tar.gz
-    # echo "===================== Chaincode is installed on peer1.org2 ===================== "
+     setGlobalsForPeer1Org2
+     peer lifecycle chaincode install ${CC_NAME}.tar.gz
+     echo "===================== Chaincode is installed on peer1.org2 ===================== "
 }
 
-# installChaincode
+ installChaincode
 
 queryInstalled() {
     setGlobalsForPeer0Org1
@@ -285,17 +285,17 @@ chaincodeQuery() {
 # Run this function if you add any new dependency in chaincode
 # presetup
 
-packageChaincode
-installChaincode
-queryInstalled
-approveForMyOrg1
-checkCommitReadyness
-approveForMyOrg2
-checkCommitReadyness
-commitChaincodeDefination
-queryCommitted
-chaincodeInvokeInit
-sleep 5
-chaincodeInvoke
-sleep 3
-chaincodeQuery
+#packageChaincode
+#installChaincode
+#queryInstalled
+#approveForMyOrg1
+#checkCommitReadyness
+#approveForMyOrg2
+#checkCommitReadyness
+#commitChaincodeDefination
+#queryCommitted
+#chaincodeInvokeInit
+#sleep 5
+#chaincodeInvoke
+#sleep 3
+#chaincodeQuery
