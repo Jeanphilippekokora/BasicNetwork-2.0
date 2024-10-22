@@ -24,7 +24,7 @@ class CredentialContract extends Contract {
         await ctx.stub.putState(credentialId, Buffer.from(JSON.stringify(credential)));
     }
 
-    // Récupère un Verifiable Credential par ID
+    // Récuperation d'un Verifiable Credential par ID
     async readCredential(ctx, credentialId) {
         const credentialBytes = await ctx.stub.getState(credentialId);
         if (!credentialBytes || credentialBytes.length === 0) {
@@ -34,7 +34,7 @@ class CredentialContract extends Contract {
         return credentialBytes.toString();
     }
 
-    // Révoque un Verifiable Credential
+    // Révoquer un Verifiable Credential
     async revokeCredential(ctx, credentialId) {
         const credentialBytes = await ctx.stub.getState(credentialId);
         if (!credentialBytes || credentialBytes.length === 0) {
