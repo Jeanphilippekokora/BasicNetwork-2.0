@@ -32,7 +32,7 @@ func (m *CustomMSP) ValidateIdentity(did string, certificate []byte) error {
 		return fmt.Errorf("DID %s non trouvé", did)
 	}
 
-	// Validez le certificat X.509 ici (ex: en vérifiant la chaîne de confiance)
+	// Validez le certificat X.509 ici (ex: en vérifiant la chaîne de confiance) en verifiant par exemple s'il a été émis par un CA de confiance
 	if !isValidCertificate(certificate, cert) {
 		return fmt.Errorf("Certificat X.509 invalide pour le DID %s", did)
 	}
